@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-firebase-messaging-extension",
+  "version": "1.0.0",
+  "description": "Extension plugin to add hasPermission method to cordova-plugin-firebase-messaging",
+  "cordova": {
+    "id": "cordova-plugin-firebase-messaging-extension",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelRosaDev/cordova-plugin-firebase-messaging-extension.git"
+  },
+  "keywords": [
+    "cordova",
+    "firebase",
+    "messaging",
+    "hasPermission",
+    "extension",
+    "ecosystem:cordova"
+  ],
+  "author": "Miguel Rosa",
+  "license": "MIT"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-firebase-messaging-extension"
+        version="1.0.0">
+    <name>Firebase Messaging Extension</name>
+    <description>Extension plugin to add hasPermission method to cordova-plugin-firebase-messaging</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=10.0.0" />
+        <engine name="cordova-android" version=">=8.1.0" />
+        <engine name="cordova-ios" version=">=6.0.0" />
+    </engines>
+
+    <dependency id="cordova-plugin-firebase-messaging" />
+
+    <js-module src="www/FirebaseMessagingExtension.js" name="FirebaseMessagingExtension">
+        <merges target="cordova.plugins.firebase.messaging" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FirebaseMessagingExtension">
+                <param name="android-package" value="com.outsystems.firebase.messaging.extension.FirebaseMessagingExtension" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/FirebaseMessagingExtension.java" target-dir="src/com/outsystems/firebase/messaging/extension" />
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FirebaseMessagingExtension">
+                <param name="ios-package" value="FirebaseMessagingExtensionPlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/FirebaseMessagingExtensionPlugin.h" />
+        <source-file src="src/ios/FirebaseMessagingExtensionPlugin.m" />
+    </platform>
+</plugin>
