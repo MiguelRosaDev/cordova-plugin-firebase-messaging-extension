@@ -13,7 +13,7 @@
         <engine name="cordova-ios" version=">=6.0.0" />
     </engines>
 
-    <dependency id="cordova-plugin-firebase-messaging" url="https://github.com/OutSystems/cordova-plugin-firebase-messaging" />
+    <dependency id="cordova-plugin-firebase-messaging" url="https://github.com/OutSystems/cordova-outsystems-firebase-cloud-messaging.git#2.6.0" />
 
     <js-module src="www/FirebaseMessagingExtension.js" name="FirebaseMessagingExtension">
         <merges target="cordova.plugins.firebase.messaging" />
