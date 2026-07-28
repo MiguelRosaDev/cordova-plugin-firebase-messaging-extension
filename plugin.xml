@@ -21,9 +21,9 @@
     </js-module>
 
     <platform name="android">
-        <config-file target="AndroidManifest.xml" parent="/manifest">
+        <edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
             <manifest xmlns:tools="http://schemas.android.com/tools" />
-        </config-file>
+        </edit-config>
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseMessagingExtension">
