@@ -21,9 +21,8 @@
     </js-module>
 
     <platform name="android">
-        <edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
-            <manifest xmlns:tools="http://schemas.android.com/tools" />
-        </edit-config>
+        <hook type="after_prepare" src="hooks/android/addXmlnsTools.js" />
+        <hook type="before_compile" src="hooks/android/addXmlnsTools.js" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseMessagingExtension">
