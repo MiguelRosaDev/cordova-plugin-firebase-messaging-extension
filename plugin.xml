@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         id="cordova-plugin-firebase-messaging-extension"
         version="1.0.0">
     <name>Firebase Messaging Extension</name>
@@ -20,6 +21,10 @@
     </js-module>
 
     <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <manifest xmlns:tools="http://schemas.android.com/tools" />
+        </config-file>
+
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseMessagingExtension">
                 <param name="android-package" value="com.outsystems.firebase.messaging.extension.FirebaseMessagingExtension" />
